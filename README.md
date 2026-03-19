@@ -12,10 +12,15 @@ https://www.youtube.com/watch?v=ocPOHZJ21jE
 ## Beispielcode 
 ```
 // DBs anzeigen
-show dbs
+show dbs;
 
-// DB blog anlegen
-use blog
+// DB blog löschen
+use blog;
+db.dropDatabase(); 
+
+// DB blog neu anlegen
+const dbName = "blog";
+const db = db.getSiblingDB(dbName);
 
 // Collection in DB anlegen
 db.createCollection("posts")
